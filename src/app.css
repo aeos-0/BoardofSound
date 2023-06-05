@@ -1,0 +1,74 @@
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #EECFD4;
+  border-radius: 10px;
+}
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.leftb {
+  margin-right: 2rem;
+  margin-top: 1rem;
+}
+
+.rightb {
+  margin-left: 2rem;
+  margin-top: 1rem;
+}
+
+#reset {
+  margin-top: .5rem;
+  background-color: #FEA1A1 !important;
+  border: #FEA1A1 !important;
+  color: #ECCDB4;
+}
+
+.playButton {
+  background-color: #F0EDD4 !important;
+  border: #EECFD4 !important;
+  color: #ECCDB4 !important;
+}
+
+.range::-webkit-slider-runnable-track {
+  background: #F0EDD4 !important;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  background-color: #ECCDB4;
+  color: #ECCDB4;
+}
+
+/*New title bar*/
+.titlebar {
+  height: 30px;
+  background: #EECFD4;
+  user-select: none;
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  border-radius: 10px;
+  border-color: #EECFD4;
+  overflow: hidden;
+}
+.titlebar-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+}
+.titlebar-button:hover {
+  background: #F0EDD4;
+}

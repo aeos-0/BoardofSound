@@ -1,0 +1,119 @@
+{
+  "$schema": "../node_modules/@tauri-apps/cli/schema.json",
+  "build": {
+    "beforeBuildCommand": "npm run build",
+    "beforeDevCommand": "npm run dev",
+    "devPath": "http://localhost:5173",
+    "distDir": "../src"
+  },
+  "package": {
+    "productName": "Peach",
+    "version": "1.0.1"
+  },
+  "tauri": {
+    "allowlist": {
+      "all": true,
+      "window": {
+        "all": false,
+        "close": true,
+        "hide": true,
+        "show": true,
+        "maximize": true,
+        "minimize": true,
+        "unmaximize": true,
+        "unminimize": true,
+        "startDragging": true
+      },
+      "dialog": {
+        "open": true,
+        "save": false
+      },
+      "fs": {
+        "scope": ["$APPLOCALDATA/*"],
+        "all": true,
+        "readFile": true,
+        "writeFile": true,
+        "readDir": true,
+        "copyFile": true,
+        "createDir": true,
+        "removeDir": false,
+        "removeFile": true,
+        "renameFile": false,
+        "exists": true
+      },
+      "path":  {
+        "all": true
+      }
+    },
+    "bundle": {
+      "active": true,
+      "category": "Music",
+      "copyright": "",
+      "publisher": "Aeos",
+      "deb": {
+        "depends": []
+      },
+      "externalBin": [],
+      "icon": [
+        "icons/32x32.png",
+        "icons/128x128.png",
+        "icons/128x128@2x.png",
+        "icons/icon.icns",
+        "icons/icon.ico"
+      ],
+      "identifier": "Peach",
+      "longDescription": "",
+      "macOS": {
+        "entitlements": null,
+        "exceptionDomain": "",
+        "frameworks": [],
+        "providerShortName": null,
+        "signingIdentity": null
+      },
+      "resources": [],
+      "shortDescription": "A sound board",
+      "targets": "all",
+      "windows": {
+        "certificateThumbprint": null,
+        "digestAlgorithm": "sha256",
+        "timestampUrl": ""
+      }
+    },
+    "security": {
+      "csp": null
+    },
+    "updater": {
+      "active": false
+    },
+    "windows": [
+      {
+        "fullscreen": false,
+        "height": 500,
+        "width": 400,
+        "resizable": true,
+        "title": "Peach",
+        "minWidth": 400,
+        "minHeight": 500,
+        "center": true,
+        "transparent": true,
+        "visible": false,
+        "decorations": false,
+        "contentProtected": true
+      },
+
+      {
+        "width": 200,
+        "height": 200,
+        "decorations": false,
+        "center": true,
+        "resizable": false,
+        "url": "splashscreen.svelte",
+        "label": "splashscreen",
+        "transparent": true,
+        "focus": true,
+        "alwaysOnTop": true,
+        "contentProtected": true
+      }
+    ]
+  }
+}
