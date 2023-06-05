@@ -11,13 +11,13 @@
 <style>
   @keyframes bounce {
   0% {
-    transform: translateY(4px);
+    transform: translateY(3px);
   }
   50% {
     transform: translateY(-11px);
   }
   100% {
-    transform: translateY(4px);
+    transform: translateY(0px);
   }
 }
   .peach {

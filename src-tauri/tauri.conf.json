@@ -12,7 +12,6 @@
   },
   "tauri": {
     "allowlist": {
-      "all": true,
       "window": {
         "all": false,
         "close": true,
@@ -111,7 +110,7 @@
         "label": "splashscreen",
         "transparent": true,
         "focus": true,
-        "alwaysOnTop": true,
+        "alwaysOnTop": false,
         "contentProtected": true
       }
     ]
