@@ -8,10 +8,21 @@
   },
   "package": {
     "productName": "Peach",
-    "version": "1.0.0"
+    "version": "1.0.1"
   },
   "tauri": {
     "allowlist": {
+      "window": {
+        "all": false,
+        "close": true,
+        "hide": true,
+        "show": true,
+        "maximize": true,
+        "minimize": true,
+        "unmaximize": true,
+        "unminimize": true,
+        "startDragging": true
+      },
       "dialog": {
         "open": true,
         "save": false
@@ -83,6 +94,7 @@
         "minHeight": 500,
         "center": true,
         "visible": false,
+        "decorations": false,
         "contentProtected": true
       },
 
@@ -96,7 +108,7 @@
         "label": "splashscreen",
         "transparent": true,
         "alwaysOnTop": true,
-        "contentProtected": true
+        "contentProtected": false
       }
     ]
   }

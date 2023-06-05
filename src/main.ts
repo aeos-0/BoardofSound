@@ -7,6 +7,7 @@ import { invoke } from '@tauri-apps/api';
 import { open } from '@tauri-apps/api/dialog';
 import { appLocalDataDir } from '@tauri-apps/api/path';
 import { removeFile, copyFile, exists, writeBinaryFile, BaseDirectory } from '@tauri-apps/api/fs';
+import { appWindow } from '@tauri-apps/api/window';
 //import { checkUpdate, installUpdate } from '@tauri-apps/api/updater';
  
 
@@ -15,6 +16,16 @@ const app = new App({
   target: document.getElementById('app'),
 })
 
+//New titlebar
+document
+  .getElementById('titlebar-minimize')
+  .addEventListener('click', () => appWindow.minimize())
+document
+  .getElementById('titlebar-maximize')
+  .addEventListener('click', () => appWindow.toggleMaximize())
+document
+  .getElementById('titlebar-close')
+  .addEventListener('click', () => appWindow.close())
 
 export default app
 invoke('close_splashscreen')

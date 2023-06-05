@@ -11,7 +11,7 @@ use std::time::Duration;
 
 #[tauri::command]
 async fn close_splashscreen(window: tauri::Window) {
-  thread::sleep(Duration::from_secs(4));
+  //thread::sleep(Duration::from_secs(20));
   // Close splashscreen
   if let Some(splashscreen) = window.get_window("splashscreen") {
     splashscreen.close().unwrap();

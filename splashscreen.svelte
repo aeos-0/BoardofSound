@@ -1,10 +1,5 @@
 <script>
-  import { onMount } from 'svelte';
-  
-  onMount(() => {
-    setTimeout(() => {
-    }, 5000);
-  });
+
 </script>
 
 <main class="animate__animated animate__bounce">
@@ -14,9 +9,17 @@
 </main>
 
 <style>
- /* ::-webkit-scrollbar {
-    display: none;
-  }*/
+  @keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
   .peach {
     max-width: 100%;
     max-height: 100%;
@@ -25,7 +28,8 @@
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-    border-radius: 5px;
+    border-radius: 2px;
+    animation: bounce .50s infinite;
   }
 
   .splash {
