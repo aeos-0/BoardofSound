@@ -4,7 +4,7 @@
     "beforeBuildCommand": "npm run build",
     "beforeDevCommand": "npm run dev",
     "devPath": "http://localhost:5173",
-    "distDir": "./src"
+    "distDir": "../src"
   },
   "package": {
     "productName": "Peach",
@@ -12,6 +12,7 @@
   },
   "tauri": {
     "allowlist": {
+      "all": true,
       "window": {
         "all": false,
         "close": true,
@@ -48,6 +49,7 @@
       "active": true,
       "category": "Music",
       "copyright": "",
+      "publisher": "Aeos",
       "deb": {
         "depends": []
       },
@@ -69,7 +71,7 @@
         "signingIdentity": null
       },
       "resources": [],
-      "shortDescription": "",
+      "shortDescription": "A sound board",
       "targets": "all",
       "windows": {
         "certificateThumbprint": null,
@@ -93,6 +95,7 @@
         "minWidth": 400,
         "minHeight": 500,
         "center": true,
+        "transparent": true,
         "visible": false,
         "decorations": false,
         "contentProtected": true
@@ -107,8 +110,9 @@
         "url": "splashscreen.svelte",
         "label": "splashscreen",
         "transparent": true,
+        "focus": true,
         "alwaysOnTop": true,
-        "contentProtected": false
+        "contentProtected": true
       }
     ]
   }

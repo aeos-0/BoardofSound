@@ -6,8 +6,10 @@ use tauri::Manager;
 use std::fs::File;
 use std::io::BufReader;
 use rodio::{Decoder, OutputStream, Sink};
-use std::thread;
-use std::time::Duration;
+/*use std::thread;
+use std::time::Duration;*/
+
+
 
 #[tauri::command]
 async fn close_splashscreen(window: tauri::Window) {
