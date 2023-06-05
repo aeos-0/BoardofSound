@@ -110,7 +110,7 @@
         "label": "splashscreen",
         "transparent": true,
         "focus": true,
-        "alwaysOnTop": false,
+        "alwaysOnTop": true,
         "contentProtected": true
       }
     ]
