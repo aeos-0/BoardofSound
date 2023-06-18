@@ -4,7 +4,7 @@
     "beforeBuildCommand": "npm run build",
     "beforeDevCommand": "npm run dev",
     "devPath": "http://localhost:5173",
-    "distDir": "../src"
+    "distDir": "../dist"
   },
   "package": {
     "productName": "Peach",
@@ -29,7 +29,7 @@
       },
       "fs": {
         "scope": ["$APPLOCALDATA/*"],
-        "all": true,
+        "all": false,
         "readFile": true,
         "writeFile": true,
         "readDir": true,
@@ -69,7 +69,8 @@
         "providerShortName": null,
         "signingIdentity": null
       },
-      "resources": [],
+      "resources": [
+        ],
       "shortDescription": "A sound board",
       "targets": "all",
       "windows": {
@@ -94,19 +95,20 @@
         "minWidth": 400,
         "minHeight": 500,
         "center": true,
-        "transparent": true,
+        "transparent": false,
         "visible": false,
         "decorations": false,
+        "focus": true,
         "contentProtected": true
       },
 
       {
-        "width": 200,
-        "height": 200,
+        "width": 250,
+        "height": 250,
         "decorations": false,
         "center": true,
         "resizable": false,
-        "url": "splashscreen.svelte",
+        "url": "splashscreen.html",
         "label": "splashscreen",
         "transparent": true,
         "focus": true,

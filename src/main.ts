@@ -1,3 +1,4 @@
+//"ppeach400.gif", "splashscreen.html"
 export const buttonIndex = writable(0);
 
 import './app.css'
@@ -27,9 +28,14 @@ document
   .getElementById('titlebar-close')
   .addEventListener('click', () => appWindow.close())
 
-export default app
-invoke('close_splashscreen')
 
+
+document.addEventListener('DOMContentLoaded', () => {
+  // This will wait for the window to load, but you could
+  // run this function on whatever trigger you want
+  invoke('close_splashscreen')
+})
+export default app
 console.log("App exported");
 
 

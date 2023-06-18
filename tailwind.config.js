@@ -5,8 +5,7 @@ export default {
   purge: {
     enabled: true,
     content: [
-    './src/App.svelte',
-    './splashscreen.svelte',
+    './src/App.svelte'
     ]
   },
   theme: {
