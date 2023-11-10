@@ -1,4 +1,3 @@
-//"ppeach400.gif", "splashscreen.html"
 export const buttonIndex = writable(0);
 
 import './app.css'
@@ -9,7 +8,6 @@ import { open } from '@tauri-apps/api/dialog';
 import { appLocalDataDir } from '@tauri-apps/api/path';
 import { removeFile, copyFile, exists, writeBinaryFile, BaseDirectory } from '@tauri-apps/api/fs';
 import { appWindow } from '@tauri-apps/api/window';
-//import { checkUpdate, installUpdate } from '@tauri-apps/api/updater';
  
 
 
@@ -37,19 +35,6 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 export default app
 console.log("App exported");
-
-
-//On load check for update
-/*const update = await checkUpdate();
-if (update.shouldUpdate) {
-  console.log(`Installing update ${update.manifest?.version}, ${update.manifest?.date}`);
-  await installUpdate();
-}
-else {
-    console.log("No new update available");
-}*/
-
-
 
 const localDataPath = await appLocalDataDir();
 const volumeSlider = document.getElementById("volume") as HTMLInputElement;
@@ -145,7 +130,6 @@ async function playClick(id: string, vol: number) {
     return;
   }
 
-  //buttonIndex.set(parseInt(id));
   let oldFile = file;
   
   //This will never happen
